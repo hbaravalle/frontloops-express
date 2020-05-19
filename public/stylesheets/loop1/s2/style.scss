@@ -1,0 +1,133 @@
+$darkColor: #333;
+$midColor: #999;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('../../../images/loop1/s2/background.jpg');
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-form {
+  width: 500px;
+  background-color: #fff;
+  border-radius: 7px;
+
+
+  h2 {
+    color: $darkColor;
+    text-align: center;
+    padding: 30px 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  form {
+    overflow: hidden;
+
+    .form-group {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      text-transform: uppercase;
+      color: $midColor;
+      font-weight: bold;
+      letter-spacing: 1px;
+      border-top: 1px solid #eaeaea;
+      padding: 10px 40px;
+      cursor: pointer;
+      transition: background 0.13s ease-in-out;
+
+      &:hover {
+        background-color: #eaeaea;
+      }
+
+      &::before {
+        content: '';
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      &.visa::before {
+        background-image: url('../img/visa.svg');
+      }
+
+      &.mastercard::before {
+        background-image: url('../img/mastercard.svg');
+      }
+
+      &.maestro::before {
+        background-image: url('../img/maestro.svg');
+      }
+
+      input {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: 40px;
+        visibility: hidden;
+
+        &:checked::after {
+          content: '';
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          background-color: rgba(255, 255, 255, 0);
+          background-image: url('../img/check.svg');
+          background-size: contain;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  button {
+    position: relative;
+    width: 100%;
+    padding: 23px 0;
+    border:none;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background: #598bdd;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:active {
+      transform: translateY(2px);
+    }
+
+    &::after {
+      position: absolute;
+      content:'';
+      width: 16px;
+      height: 16px;
+      margin-left: 7px;
+      background-image: url('../img/arrow.svg');
+      background-size: cover;
+    }
+  }
+}
+
+input:checked + span {
+  color: $darkColor;
+}

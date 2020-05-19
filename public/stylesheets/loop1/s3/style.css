@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #16a085;
+}
+
+body main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body main section.checkout {
+  position: relative;
+  max-width: 600px;
+  padding: 30px 85px 190px 85px;
+  border-radius: 6px;
+  background-color: white;
+  background-image: url("../../../images/loop1/s3/bicycle.png");
+  background-position: center 280%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+body main section.checkout .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body main section.checkout .header h2 {
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+body main section.checkout .header button.user {
+  width: 45px;
+  height: 45px;
+  padding: 8px;
+  margin-top: -7px;
+  border: 1px solid #eaeaea;
+  border-radius: 50%;
+  background-image: url("../../../images/loop1/s3/account.svg");
+  background-color: rgba(255, 255, 255, 0);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: box-shadow .25s ease-in-out;
+}
+
+body main section.checkout .header button.user:hover {
+  box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+body main section.checkout > p {
+  color: #999;
+}
+
+body main section.checkout article {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0;
+}
+
+body main section.checkout article p {
+  font-size: 18px;
+  color: #555;
+}
+
+body main section.checkout article span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+body main section.checkout article.total h3 {
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=style.css.map */

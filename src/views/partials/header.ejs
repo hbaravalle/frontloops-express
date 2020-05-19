@@ -1,0 +1,20 @@
+<div>
+    <% if(step != 1) { %>
+        <small><%= `Loop ${loop}` %></small>
+        <span><%= `Challenge ${step - 1}` %></span>
+    <% } else { %>
+        <% if(loop != 1) { %>
+            <small><%= `Loop ${loop}` %></small>
+            <span><%= `Challenge ${step - 1}` %></span>
+        <% } %>
+    <% } %>
+</div>
+<div>
+    <% if(step == 10) {%>
+        <small><%= `Loop ${loop + 1}` %></small>
+        <span><%= `Challenge 1` %></span>
+    <% } else { %>
+        <small><%= `Loop ${loop}` %></small>
+        <span><%= `Challenge ${step + 1}` %></span>
+    <% } %>
+</div>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head') %>
+</head>
+<body>
+  <header>
+    <%- include('../partials/header') %>
+  </header>
+  <main>
+    <div class="payment-form">
+      <!-- FALTA PAGINATION -->
+      <h2>Payment method</h2>
+      <form action="" method="post">
+        <label class="form-group visa"><input type="radio" name="credit-card" value="visa"><span>visa</span></label>
+        <label class="form-group mastercard"><input type="radio" name="credit-card" value="mastercard"><span>Mastercard</span></label>
+        <label class="form-group maestro"><input type="radio" name="credit-card" value="maestro"><span>Maestro</span></label>
+        <button type="submit">Next step</button>
+      </form>
+    </div>
+  </main>
+  <%- include('../partials/scripts') %>
+</body>
+</html>
